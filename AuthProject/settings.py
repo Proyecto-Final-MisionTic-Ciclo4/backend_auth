@@ -17,7 +17,6 @@ from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -84,8 +83,7 @@ REST_FRAMEWORK = {
 # IsAdminUser
 # IsAuthenticatedOrReadOnly
 
-# AUTH_USER_MODEL = 'ZarcoApp.User'
-
+AUTH_USER_MODEL = 'authApp.User'
 ROOT_URLCONF = 'AuthProject.urls'
 
 TEMPLATES = [
@@ -112,11 +110,14 @@ WSGI_APPLICATION = 'AuthProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'auth_ms',
+    'USER': 'postgres',
+    'PASSWORD': 'Andesynene13',
+    'HOST': 'localhost',
+    'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

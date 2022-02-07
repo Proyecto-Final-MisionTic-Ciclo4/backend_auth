@@ -8,12 +8,12 @@ from authApp.models.user import User
 from authApp.serializers.userSerializer import UserSerializer
 
 
-class UserDetailView(generics.RetrieveAPIView):
+class UserDeleteView(generics.DestroyAPIView):
     queryset = User.objects.all() # se traen todos los datos
     serializer_class = UserSerializer # Me llama al to_representation para devolverme los datos
     # permission_classes = (IsAuthenticated, )
     
-    def get(self, request, *args, **kwargs):
+    def delete(self, request, *args, **kwargs):
         
         """token = request.META.get('HTTP_AUTHORIZATION')[7:]
         tokenBackend = TokenBackend(algorithm=settings.SIMPLE_JWT['ALGORITHM']) # el algoritmo para encriptar
@@ -23,4 +23,4 @@ class UserDetailView(generics.RetrieveAPIView):
             stringResponse = {'detail':'Unauthorized Request'} # valida que el usuario este pidiendo info de el y no de otro user
             return Response(stringResponse, status=status.HTTP_401_UNAUTHORIZED)"""
                 
-        return super().get(request, *args, **kwargs)
+        return super().destroy(request, *args, **kwargs)

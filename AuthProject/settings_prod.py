@@ -24,10 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-50qna&$+a3619274^4jkbo*%j-ch_06+v=7u!g+2ohawj#^=sc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['localhost']
 
-ALLOWED_HOSTS = []
-CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -40,14 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',  # conector REST
     'authApp',
-    'corsheaders',
 ]
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
-    'BLACKLIST_AFTER_ROTATION': True,
+    'BLACKLIST_AFTER_ROTATION': False,
     'UPDATE_LAST_LOGIN': False,
     'ALGORITHM': 'HS256',
     'USER_ID_FIELD': 'id',
@@ -58,7 +56,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     # corse
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -111,10 +108,10 @@ WSGI_APPLICATION = 'AuthProject.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'auth_ms',
-    'USER': 'postgres',
-    'PASSWORD': 'Andesynene13',
-    'HOST': 'localhost',
+    'NAME': 'd517njcubb8f3',
+    'USER': 'hwumfdhgfhknql',
+    'PASSWORD': 'e045c498815db070ca64dca8036377b3278fecf64aa5f5064e1f800626867017',
+    'HOST': 'ec2-44-195-201-3.compute-1.amazonaws.com',
     'PORT': '5432',
     }
 }

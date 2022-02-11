@@ -5,7 +5,7 @@ class UserSerializer(serializers.ModelSerializer):
     """El usuario tiene la funcion de crear la cuenta"""
     class Meta:
         model  = User
-        fields = ['id', 'username', 'password', 'name']
+        fields = ['id', 'username', 'password', 'name', 'email']
     
     """def create(self, validated_data):
         Creacion de usuario

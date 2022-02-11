@@ -101,12 +101,21 @@ XIII. DOKER - Clase 7
     2. Configurar doker
     3. Crear heroku ambiente
     3.1. Heroku login
-    3.2. heroku container:login 
+    3.2. heroku container:login
     3.3. heroku container:push web --app mision-tic-22-be-auth-ms <nombre app en heroku>
-    3.4. heroku container:release web --app nombre-app,
+        heroku container:push mision-tic-22-be-auth-ms -a=authApp
+    3.4. heroku container:release web --app mision-tic-22-be-auth-ms,
     4. Desplegado
-
 
 XIV. FRONTEND
 
     1. Se necesita installar Vue Js
+
+XV. PRUEBAS
+
+{
+"username": "juli",
+"password": 54321,
+"name": "Juliana",
+"email": "cjaramillo"
+}

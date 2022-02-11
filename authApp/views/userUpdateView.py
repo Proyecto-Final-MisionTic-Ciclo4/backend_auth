@@ -8,7 +8,7 @@ from authApp.models.user import User
 from authApp.serializers.userSerializer import UserSerializer
 
 
-class UserUpdateView(generics.UpdateAPIView):
+class UserUpdateView(generics.RetrieveUpdateAPIView):
     queryset = User.objects.all() # se traen todos los datos
     serializer_class = UserSerializer # Me llama al to_representation para devolverme los datos
     # permission_classes = (IsAuthenticated, )

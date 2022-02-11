@@ -95,6 +95,18 @@ XII. Despliegue en Heroku entorno
     9. git push heroku master
     10. heroku config:set DJANGO_ALLOWED_HOSTS=https://zarcos-web-be.herokuapp.com/
 
-XIII. FRONTEND
+XIII. DOKER - Clase 7
+
+    1. Installar docker (probelma con windows - REVISAR)
+    2. Configurar doker
+    3. Crear heroku ambiente
+    3.1. Heroku login
+    3.2. heroku container:login 
+    3.3. heroku container:push web --app mision-tic-22-be-auth-ms <nombre app en heroku>
+    3.4. heroku container:release web --app nombre-app,
+    4. Desplegado
+
+
+XIV. FRONTEND
 
     1. Se necesita installar Vue Js

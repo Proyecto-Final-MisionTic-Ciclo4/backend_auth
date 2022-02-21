@@ -97,7 +97,7 @@ XII. Despliegue en Heroku entorno
 
 XIII. DOKER - Clase 7
 
-    1. Installar docker (probelma con windows - REVISAR)
+    1. Installar docker 
     2. Configurar doker
     3. Crear heroku ambiente
     3.1. Heroku login
